@@ -1,0 +1,52 @@
+<div class="container" style="padding-left: 0; padding-right: 0;">
+  <header class="navbar navbar-light navbar-fixed-top navbar-expand-lg">
+    <a class="navbar-brand" [routerLink]="['/home']" (click)="navbarCollapsed = true">Matt Stillson</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" (click)="navbarCollapsed = !navbarCollapsed"
+            [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/home']" (click)="navbarCollapsed = true">My Home</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/about']" (click)="navbarCollapsed = true">About Me!</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/resume']" (click)="navbarCollapsed = true">Resume</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/examples']" (click)="navbarCollapsed = true">Examples</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/blog']" (click)="navbarCollapsed = true">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<footer class="bd-footer text-muted small bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>HOLY BATMAN!</h1>
+      </div>
+      <div class="col-md-2">
+        <div class="align-self-end">
+          <p>sub section 1</p>
+        </div>
+        <div class="">
+          <p>sub section 2</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+          Icons made by Freepik from <a href="http://http://www.freepik.com/">www.flaticon.com</a>
+        <p>bread crumbs</p>
+      </div>
+    </div>
+  </div>
+</footer>
