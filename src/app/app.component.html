@@ -8,25 +8,22 @@
     <div class="navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" [routerLinkActive]="['active']">
-          <a class="nav-link" [routerLink]="['/home']" (click)="navbarCollapsed = true">My Home</a>
+          <a class="nav-link" [routerLink]="['/home']" (click)="navbarCollapsed = true">Home</a>
         </li>
         <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" [routerLink]="['/about']" (click)="navbarCollapsed = true">About Me!</a>
         </li>
         <li class="nav-item" [routerLinkActive]="['active']">
-          <a class="nav-link" [routerLink]="['/resume']" (click)="navbarCollapsed = true">Resume</a>
+          <a class="nav-link" [routerLink]="['/resume']" (click)="navbarCollapsed = true">My Resume</a>
         </li>
         <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" [routerLink]="['/examples']" (click)="navbarCollapsed = true">Examples</a>
-        </li>
-        <li class="nav-item" [routerLinkActive]="['active']">
-          <a class="nav-link" [routerLink]="['/blog']" (click)="navbarCollapsed = true">Blog</a>
         </li>
       </ul>
     </div>
   </header>
 </div>
-<div class="container">
+<div>
   <router-outlet></router-outlet>
 </div>
 <footer class="bd-footer text-muted small bg-dark">
